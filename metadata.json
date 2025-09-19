@@ -1,0 +1,5 @@
+{
+  "name": "PromptForge AI",
+  "description": "A dynamic prompt development environment that runs entirely in your browser. Craft, manage, and test AI prompts using a powerful editor with in-browser persistence and robust import/export features for sharing and backup.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptForge AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Theming using CSS Custom Properties - Dark Theme Variants */
+        :root, body.theme-slate {
+            --color-bg-primary: 15 23 42;      /* slate-900 */
+            --color-bg-secondary: 30 41 59;     /* slate-800 */
+            --color-bg-tertiary: 51 65 85;      /* slate-700 */
+            --color-sidebar-bg: 30 41 59;       /* slate-800 */
+            --color-sidebar-text: 203 213 225;  /* slate-300 */
+            --color-sidebar-text-accent: 255 255 255; /* white */
+            --color-text-primary: 248 250 252;  /* slate-50 */
+            --color-text-secondary: 226 232 240; /* slate-200 */
+            --color-text-tertiary: 148 163 184; /* slate-400 */
+            --color-border: 51 65 85;           /* slate-700 */
+            --color-accent: 79 70 229;          /* indigo-600 */
+            --color-accent-hover: 99 102 241;   /* indigo-500 */
+            --color-accent-text: 255 255 255;   /* white */
+        }
+        
+        body.theme-sky {
+            --color-bg-primary: 12 74 110;      /* sky-900 */
+            --color-bg-secondary: 8 47 73;      /* sky-950 */
+            --color-bg-tertiary: 3 105 161;     /* sky-700 */
+            --color-sidebar-bg: 8 47 73;        /* sky-950 */
+            --color-sidebar-text: 186 230 253;  /* sky-200 */
+            --color-sidebar-text-accent: 255 255 255;
+            --color-text-primary: 240 249 255;  /* sky-50 */
+            --color-text-secondary: 224 242 254; /* sky-100 */
+            --color-text-tertiary: 186 230 253; /* sky-200 */
+            --color-border: 3 105 161;          /* sky-700 */
+            --color-accent: 56 189 248;         /* sky-400 */
+            --color-accent-hover: 125 211 252;  /* sky-300 */
+            --color-accent-text: 12 74 110;     /* sky-900 */
+        }
+
+        body.theme-rose {
+            --color-bg-primary: 131 24 67;      /* rose-900 */
+            --color-bg-secondary: 88 28 135;    /* fuchsia-900 */
+            --color-bg-tertiary: 112 26 117;    /* fuchsia-800 */
+            --color-sidebar-bg: 88 28 135;      /* fuchsia-900 */
+            --color-sidebar-text: 245 208 254;  /* fuchsia-200 */
+            --color-sidebar-text-accent: 255 255 255;
+            --color-text-primary: 255 241 242;  /* rose-50 */
+            --color-text-secondary: 254 226 226; /* rose-100 */
+            --color-text-tertiary: 253 164 175; /* rose-300 */
+            --color-border: 157 23 77;          /* rose-800 */
+            --color-accent: 244 114 182;        /* pink-400 */
+            --color-accent-hover: 236 72 153;   /* pink-500 */
+            --color-accent-text: 131 24 67;     /* rose-900 */
+        }
+
+        /* User Guide Modal Content Styling */
+        .user-guide-content h1, .user-guide-content h2, .user-guide-content h3 {
+            color: rgb(var(--color-text-primary));
+            border-bottom: 1px solid rgb(var(--color-border));
+            padding-bottom: 0.25em;
+            margin-bottom: 0.5em;
+        }
+        .user-guide-content p, .user-guide-content li {
+            color: rgb(var(--color-text-secondary));
+        }
+        .user-guide-content a {
+            color: rgb(var(--color-accent));
+            text-decoration: none;
+        }
+        .user-guide-content a:hover {
+            text-decoration: underline;
+        }
+        .user-guide-content code {
+            background-color: rgb(var(--color-bg-tertiary));
+            color: #f472b6; /* pink-400 */
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            border-radius: 6px;
+        }
+        .user-guide-content pre > code {
+            display: block;
+            padding: 1em;
+            white-space: pre-wrap;
+        }
+        .user-guide-content blockquote {
+            border-left: 4px solid rgb(var(--color-border));
+            padding-left: 1em;
+            color: rgb(var(--color-text-tertiary));
+            font-style: italic;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "gray-matter": "https://aistudiocdn.com/gray-matter@^4.0.3",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^9.0.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
+    "idb": "https://aistudiocdn.com/idb@^8.0.3"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
